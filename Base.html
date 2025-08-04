@@ -8,7 +8,8 @@
     <body>
         <div class="base">
             <div class="top">
-
+            <div class="previous">88</div>
+            <div class="present">88</div>
             </div>
            <div class="memory">
                 <button class="mbtn">MC</button>
@@ -19,38 +20,40 @@
                 <button class="mbtn">M^</button>
             </div>
             <div class="bottom">                
-                <button class="btn">%</button>
-                <button class="btn">CE</button>
-                <button class="btn">C</button>
-                <button class="btn">&#x2190;</button>
+                <button class="btn" id="modulus">%</button>
+                <button class="btn" id="clr entry">CE</button>
+                <button class="btn" id="clear">C</button>
+                <button class="btn" id="backspace">&#x2190;</button>
                 
-                <button class="btn">1/x</button>
-                <button class="btn">x<sup>2</sup></button>
-                <button class="btn"><sup>2</sup>&radic;x</button>
-                <button class="btn">&divide;</button>
+                <button class="btn" id="reciprocal">1/x</button>
+                <button class="btn" id="square">x<sup>2</sup></button>
+                <button class="btn" id="root"><sup>2</sup>&radic;x</button>
+                <button class="btn" id="divide">&divide;</button>
                 
-                <button class="nbtn">7</button>
-                <button class="nbtn">8</button>
-                <button class="nbtn">9</button>
-                <button class="btn">&times;</button>
+                <button class="nbtn" id="seven">7</button>
+                <button class="nbtn" id="eight">8</button>
+                <button class="nbtn" id="nine">9</button>
+                <button class="btn" id=" multiply">&times;</button>
                 
-                <button class="nbtn">4</button>
-                <button class="nbtn">5</button>
-                <button class="nbtn">6</button>
-                <button class="btn">-</button>
+                <button class="nbtn" id="four">4</button>
+                <button class="nbtn" id="five">5</button>
+                <button class="nbtn" id="six">6</button>
+                <button class="btn" id="minus">-</button>
                 
-                <button class="nbtn">1</button>
-                <button class="nbtn">2</button>
-                <button class="nbtn">3</button>
-                <button class="btn">+</button>
+                <button class="nbtn" id="one">1</button>
+                <button class="nbtn" id="two">2</button>
+                <button class="nbtn" id="three">3</button>
+                <button class="btn" id="add">+</button>
                 
-                <button class="nbtn">+/-</button>
-                <button class="nbtn">0</button>
-                <button class="nbtn">.</button>
-                <button class="btn" style="background-color: #db9ee5;">=</button>
+                <button class="nbtn" id="negate">+/-</button>
+                <button class="nbtn" id="zero">0</button>
+                <button class="nbtn" id="decimal">.</button>
+                <button class="btn" style="background-color: #db9ee5;color: #323232;" id="equal">=</button>
             </div>
 
         </div>
+
+        <script src="Operation.js"></script>
         
     </body>
 </html>
