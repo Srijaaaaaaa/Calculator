@@ -8,5 +8,8 @@ document.querySelectorAll('button').forEach(button => {
             console.log('this stays');
             displayDiv.textContent += clickedText;
         }
+        if(button.id === 'backspace'){
+            displayDiv.textContent = displayDiv.textContent.slice(0, -1);
+        }
     });
 });
