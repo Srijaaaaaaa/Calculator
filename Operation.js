@@ -1,4 +1,6 @@
 const displayDiv = document.getElementsByClassName('present')[0];
+const historyDiv = document.getElementsByClassName('previous')[0];
+//let alrClicked = 
 
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', function(event) {
@@ -10,6 +12,10 @@ document.querySelectorAll('button').forEach(button => {
         }
         if(button.id === 'backspace'){
             displayDiv.textContent = displayDiv.textContent.slice(0, -1);
+        }
+        if(button.classList.contains('btn') && displayDiv){
+            historyDiv.textContent = historyDiv.textContent + displayDiv.textContent + clickedText;
+
         }
     });
 });
