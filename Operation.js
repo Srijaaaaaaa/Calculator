@@ -1,13 +1,19 @@
 const displayDiv = document.getElementsByClassName('present')[0];
 const historyDiv = document.getElementsByClassName('previous')[0];
 
+let operatorClicked = false;
+
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', function(event) {
         const clickedText = event.target.innerText;
 
         if (button.classList.contains('nbtn')) {
-            console.log('this stays');
-            displayDiv.textContent += clickedText;
+            if (operatorClicked) {
+                displayDiv.textContent = clickedText;
+                operatorClicked = false;
+            } else {
+                displayDiv.textContent += clickedText;
+            }
             return;
         }
 
@@ -18,7 +24,8 @@ document.querySelectorAll('button').forEach(button => {
 
         if (button.classList.contains('btn')) {
             historyDiv.textContent += displayDiv.textContent + clickedText;
-            displayDiv.textContent = '';
+            operatorClicked = true;
+            return;
         }
     });
 });
